@@ -1,0 +1,415 @@
+:root {
+  --main-background-color: #343a50;
+  --card-background-color: #343a50;
+  --countdown-background-color: #433765;
+  --main-text-color: #f7f6f4;
+  --title-text-color: #3cba8b;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Text+Me+One&display=swap");
+
+h2,
+p {
+  color: var(--main-text-color);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 4%;
+  margin-left: 4%;
+  text-align: center;
+  justify-content: center;
+}
+
+.WalletContainer {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  top: 30px;
+  right: 30px;
+}
+
+.Wallet {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.WalletAmount {
+  color: black;
+  width: auto;
+  padding: 5px 5px 5px 16px;
+  min-width: 48px;
+  min-height: auto;
+  border-radius: 22px;
+  background-color: var(--main-text-color);
+  box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+    0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  vertical-align: middle;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.MintContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.DesContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 20px;
+}
+
+.NFT {
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 5px 20px 20px 20px;
+  flex: 1 1 auto;
+}
+
+.Price {
+  position: absolute;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 1.2em !important;
+  font-family: "Patrick Hand", cursive !important;
+}
+
+.MintButtonContainer {
+}
+
+.ConnectButton {
+  border-radius: 18px !important;
+  padding: 6px 16px;
+  background-color: #fc5e87 !important;
+  margin: 0 auto;
+}
+
+.SolExplorerLink {
+  color: var(--title-text-color);
+  border-bottom: 1px solid var(--title-text-color);
+  font-weight: bold;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  outline: none;
+  text-decoration: none;
+  text-size-adjust: 100%;
+
+  :hover {
+    border-bottom: 2px solid var(--title-text-color);
+  }
+}
+
+.Card {
+  display: inline-block;
+  background-color: var(--countdown-background-color) !important;
+  margin: 5px;
+  min-width: 40px;
+  padding: 24px;
+
+  h1 {
+    margin: 0px;
+  }
+}
+
+.Image {
+  height: 300px;
+  width: auto;
+  border-radius: 7px;
+  box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.5);
+}
+
+.BorderLinearProgress {
+  margin: 20px;
+  height: 10px !important;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.5);
+  background-color: var(--main-text-color) !important;
+
+  > div.MuiLinearProgress-barColorPrimary {
+    background-color: var(--title-text-color) !important;
+  }
+
+  > div.MuiLinearProgress-bar1Determinate {
+    border-radius: 30px !important;
+    background-image: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.01),
+      rgba(255, 255, 255, 0.5)
+    );
+  }
+}
+
+.InfoMint {
+  color: #f8d448;
+
+}
+
+.mintInfo{
+  margin: 1rem 0;
+}
+
+
+.MultiMintSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CTAButton {
+  display: inline-block !important;
+  margin: 0 auto !important;
+  background: #fc5e87 !important;
+  min-width: 120px !important;
+  font-size: 1.3em !important;
+  padding: 14px 28px !important;
+  margin-top: 20px !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 15px !important;
+  font-weight: bold !important;
+  font-family: "Poppins" !important;
+}
+
+.CTAButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.Minus {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 0.5px;
+  color: var(--main-text-color);
+  background: #9ca3af;
+
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  padding: 24px 48px;
+
+  cursor: pointer;
+
+  :not(disabled):hover {
+    outline: 1px solid var(--title-text-color);
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.mint-qty {
+  font-size: 1.3em !important;
+  color: white;
+  padding: 16px 4px;
+  width: 50px;
+  text-align: center;
+  background-color: transparent;
+  margin-left: 12px;
+  margin-right: 12px;
+  outline: none;
+
+  font-weight: 500;
+
+  border-radius: 8px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  background-size: cover;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.navbar {
+  background-color: rgb(37, 38, 52);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+}
+.navbar h1 {
+  font-size: 1.5rem;
+}
+.navbar img {
+  width: 3rem;
+  border-radius: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 2rem;
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.aboutSection {
+  width: 100%;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.aboutCollection p {
+  font-size: 1.3rem;
+}
+
+.aboutCollection h1 {
+  color: #fc5d87;
+  padding-bottom: 1rem;
+}
+
+.nftBanner {
+  width: 70%;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.minting {
+  text-align: center;
+}
+
+.minting .nft {
+  margin-top: 10rem;
+  width: 30%;
+  border-radius: 20px;
+}
+
+.connectBtn {
+  font-size: 0.5rem;
+}
+
+@media (max-width: 786px) {
+  .mintInfo{
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+  .minting .nft {
+    width: 50%;
+    margin-top: 5rem;
+  }
+
+  .navbar img {
+    width: 2rem;
+  border-radius: 5px;
+
+  }
+
+  .navbar h1 {
+    font-size: 1rem;
+  }
+  .navbar ul {
+    font-size: 1rem;
+  }
+  .nftBanner {
+    width: 90%;
+  }
+
+  .aboutCollection h1 {
+    font-size: 1.3rem;
+  }
+  .aboutCollection p {
+    font-size: 1rem;
+  }
+  .BorderLinearProgress{
+    width: 100%;
+  }
+}
